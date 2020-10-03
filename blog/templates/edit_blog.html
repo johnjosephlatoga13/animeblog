@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+	</head>
+	<body>
+		<h1>Anime Blog - Edit Blog</h1>
+		<form role="form" action="" method="POST">
+		    {% csrf_token %}
+			<table class="table table-bordered table-striped">
+				<tbody>
+					<tr>
+						<th>Title</th>
+						<th>{{ blog_form.title }}</th>
+					</tr>
+					<tr>
+						<th>Anime Title</th>
+						<th>{{ blog_form.anime_title }}</th>
+					</tr>
+					<tr>
+						<th>Body</th>
+						<th>{{ blog_form.body }}</th>
+					</tr>
+					<!-- <tr >
+						<th>Author</th>
+						<th>{{ request.user.username }}</th>
+					</tr> -->
+				</tbody>
+			</table>
+			<button type="submit" class="btn btn-success">Save</button>
+		</form>
+	</body>
+</html>

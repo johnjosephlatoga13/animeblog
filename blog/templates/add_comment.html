@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+	</head>
+	<body>
+		<h1>Anime Blog - Add Comment</h1>
+		<h3>{{ blog.title }}</h3>
+		<form role="form" action="" method="POST">
+		    {% csrf_token %}
+			<table class="table table-bordered table-striped">
+				<tbody>
+					<tr>
+						<th>Body</th>
+						<th>{{ comment_form.body }}</th>
+					</tr>
+					<tr style="display: none;">
+						<th>Blog Title</th>
+						<th>{{ comment_form.blog_title }}</th>
+					</tr>
+					<!-- <tr >
+						<th>Author</th>
+						<th>{{ comment_form.author }}</th>
+					</tr> -->
+				</tbody>
+			</table>
+			<button type="submit" class="btn btn-success">Save</button>
+		</form>
+	</body>
+</html>
